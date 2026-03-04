@@ -25,9 +25,6 @@ Hint::Hint(uZ argc, cstr argv[]) : Hint{} {
             throw std::format("Unknown input: `{}`", arg);
         }
     }
-
-    // Prevent gray doubles from messing with selection.
-    grayMask &= !containedMask;
 }
 
 bool Hint::matches_with(Word word) const {
